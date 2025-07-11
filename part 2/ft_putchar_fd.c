@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: liemi <liemi@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/08 22:05:00 by liemi             #+#    #+#             */
-/*   Updated: 2025/07/09 16:56:57 by liemi            ###   ########.fr       */
+/*   Created: 2025/07/11 15:52:53 by liemi             #+#    #+#             */
+/*   Updated: 2025/07/11 15:59:50 by liemi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_calloc(size_t count, size_t size)
+void	cft_putchar_fd(char c, int fd)
 {
-	void	*ptr;
-	size_t	total;
-
-	total = count * size;
-	if (count != 0 && total / count != size)
-		return (NULL);
-	ptr = malloc(total);
-	if (!ptr)
-		return (NULL);
-	ft_bzero(ptr, total);
-	return (ptr);
+	write(fd, &c, 1);
 }
+
+// #include "libft.h"
+
+// int	main(void)
+// {
+// 	ft_putchar_fd('4', 1);
+// 	ft_putchar_fd('2', 1);
+// 	ft_putchar_fd('\n', 1);
+// 	return (0);
+// }
