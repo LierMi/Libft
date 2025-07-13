@@ -1,40 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: liemi <liemi@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/08 16:08:19 by liemi             #+#    #+#             */
-/*   Updated: 2025/07/13 17:38:14 by liemi            ###   ########.fr       */
+/*   Created: 2025/07/13 21:50:08 by liemi             #+#    #+#             */
+/*   Updated: 2025/07/13 22:08:23 by liemi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcopy(void *dest, const void *src, size_t n);
+t_list	ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	size_t				i;
-	unsigned char		*d;
-	const unsigned char	*s;
+	t_list	*new;
+	t_list	*head;
+	void	*content;
 
-	i = 0;
-	d = (unsigned char *)dest;
-	s = (const unsigned char *)src;
-
-	while (i < n)
+	if (!lst || !f)
+		return (NULL);
+	head = NULL;
+	while (lst)
 	{
-		d[i] = s[i];
-		i++;
+		content = f(lst->content);
+		new = ft_lstnew(content);
+		if (!new)
+		{
+			ft_lstclear(&head, new);
+			return (NULL);
+		}
+		ft_lstadd_back(&head, new);
+		lst = lst->next;
 	}
-	return (dest);
+	return (head);
 }
-
-// int	main(void)
-// {
-// 	char	src[10] = "ABCDEFG";
-// 	char	dest[10];
-
-// 	ft_memcpy(dest, src, 7);
-// 	dest[7] = '\0';
-// 	printf("%s\n", dest);
-// 	return (0);
-// }

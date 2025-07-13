@@ -6,7 +6,7 @@
 /*   By: liemi <liemi@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/11 16:45:41 by liemi             #+#    #+#             */
-/*   Updated: 2025/07/11 21:22:10 by liemi            ###   ########.fr       */
+/*   Updated: 2025/07/13 22:30:39 by liemi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -142,4 +142,38 @@ int	main(void)
 	write(1, "\n", 1);
 
 	return (0);
+}
+
+// bonus part
+// 工具函数 返回大写字符串副本
+void	*to_upper(void *content)
+{
+	char	*str = (char *)content;
+	char	*new = ft_strdup(str);
+	int		i;
+
+	if (!new)
+		return (NULL);
+	i = 0;
+	while (new[i])
+	{
+		new[i] = (char)toupper(new[i]);
+		i++;
+	}
+	return ((void *)new);
+} 
+
+// 原地转小写
+void	to_lower(void *content)
+{
+	char	*str;
+	int		i;
+
+	str = (char *)content;
+	i = 0;
+	while (str[i])
+	{
+		str[i] = (char)tolower(str[i]);
+		i++;
+	}
 }

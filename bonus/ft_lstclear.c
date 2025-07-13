@@ -1,40 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: liemi <liemi@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/08 16:08:19 by liemi             #+#    #+#             */
-/*   Updated: 2025/07/13 17:38:14 by liemi            ###   ########.fr       */
+/*   Created: 2025/07/13 21:31:11 by liemi             #+#    #+#             */
+/*   Updated: 2025/07/13 21:35:48 by liemi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcopy(void *dest, const void *src, size_t n);
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	size_t				i;
-	unsigned char		*d;
-	const unsigned char	*s;
+	t_list	*temp;
 
-	i = 0;
-	d = (unsigned char *)dest;
-	s = (const unsigned char *)src;
-
-	while (i < n)
+	if (!lst || !del)
+		return ;
+	while (*lst)
 	{
-		d[i] = s[i];
-		i++;
+		temp = (*lst)->next;
+		del((*lst)->content);
+		free(*lst);
+		*lst = temp;
 	}
-	return (dest);
 }
-
-// int	main(void)
-// {
-// 	char	src[10] = "ABCDEFG";
-// 	char	dest[10];
-
-// 	ft_memcpy(dest, src, 7);
-// 	dest[7] = '\0';
-// 	printf("%s\n", dest);
-// 	return (0);
-// }

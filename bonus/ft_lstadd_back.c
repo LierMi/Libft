@@ -1,40 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: liemi <liemi@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/08 16:08:19 by liemi             #+#    #+#             */
-/*   Updated: 2025/07/13 17:38:14 by liemi            ###   ########.fr       */
+/*   Created: 2025/07/13 18:58:53 by liemi             #+#    #+#             */
+/*   Updated: 2025/07/13 19:05:00 by liemi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcopy(void *dest, const void *src, size_t n);
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	size_t				i;
-	unsigned char		*d;
-	const unsigned char	*s;
+	t_list	*last;
 
-	i = 0;
-	d = (unsigned char *)dest;
-	s = (const unsigned char *)src;
-
-	while (i < n)
+	if (!lst || !new)
+		return ;
+	if (*lst == NULL)
 	{
-		d[i] = s[i];
-		i++;
+		*lst = new;
+		return ;
 	}
-	return (dest);
+	last = ft_lstlast(*lst);
+	last->next = new;
 }
-
-// int	main(void)
-// {
-// 	char	src[10] = "ABCDEFG";
-// 	char	dest[10];
-
-// 	ft_memcpy(dest, src, 7);
-// 	dest[7] = '\0';
-// 	printf("%s\n", dest);
-// 	return (0);
-// }

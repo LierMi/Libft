@@ -1,40 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: liemi <liemi@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/08 16:08:19 by liemi             #+#    #+#             */
-/*   Updated: 2025/07/13 17:38:14 by liemi            ###   ########.fr       */
+/*   Created: 2025/07/13 18:50:10 by liemi             #+#    #+#             */
+/*   Updated: 2025/07/13 18:50:17 by liemi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcopy(void *dest, const void *src, size_t n);
+int	ft_lstsize(t_list *lst)
 {
-	size_t				i;
-	unsigned char		*d;
-	const unsigned char	*s;
+	int	count;
 
-	i = 0;
-	d = (unsigned char *)dest;
-	s = (const unsigned char *)src;
-
-	while (i < n)
+	count = 0;
+	while (lst != NULL)
 	{
-		d[i] = s[i];
-		i++;
+		count++;
+		lst = lst->next;
 	}
-	return (dest);
+	return (count);
 }
-
-// int	main(void)
-// {
-// 	char	src[10] = "ABCDEFG";
-// 	char	dest[10];
-
-// 	ft_memcpy(dest, src, 7);
-// 	dest[7] = '\0';
-// 	printf("%s\n", dest);
-// 	return (0);
-// }
