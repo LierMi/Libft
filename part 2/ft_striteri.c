@@ -6,9 +6,11 @@
 /*   By: liemi <liemi@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/11 15:33:04 by liemi             #+#    #+#             */
-/*   Updated: 2025/07/11 15:43:10 by liemi            ###   ########.fr       */
+/*   Updated: 2025/07/14 18:49:39 by liemi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {

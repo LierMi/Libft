@@ -6,10 +6,11 @@
 /*   By: liemi <liemi@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/09 20:55:59 by liemi             #+#    #+#             */
-/*   Updated: 2025/07/10 19:33:35 by liemi            ###   ########.fr       */
+/*   Updated: 2025/07/14 19:32:16 by liemi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
 static size_t	count_words(char const *s, char c)
 {
@@ -80,7 +81,7 @@ char	**ft_split(char const *s, char c)
 			if (!result[i])
 				return (free_all(result, i), NULL);
 			i++;
-			s += len;
+			s += len;// 跳过当前单词，指针往后移动 len 个字符，定位到下一个单词的开头或者分隔符
 		}
 	}
 	result[i] = NULL;

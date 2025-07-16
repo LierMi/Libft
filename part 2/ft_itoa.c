@@ -6,11 +6,13 @@
 /*   By: liemi <liemi@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/10 19:46:51 by liemi             #+#    #+#             */
-/*   Updated: 2025/07/10 19:59:44 by liemi            ###   ########.fr       */
+/*   Updated: 2025/07/14 19:37:37 by liemi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static size_t	count_digits(int n)
+#include "libft.h"
+
+static size_t	count_digits(long n)
 {
 	size_t	len;
 
@@ -51,4 +53,5 @@ char	*ft_itoa(int n)
 		str[--len] = '0' + (nb % 10);
 		nb = nb / 10;
 	}
+	return (str);
 }

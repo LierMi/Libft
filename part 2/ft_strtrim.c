@@ -6,9 +6,11 @@
 /*   By: liemi <liemi@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/09 18:17:10 by liemi             #+#    #+#             */
-/*   Updated: 2025/07/09 18:39:54 by liemi            ###   ########.fr       */
+/*   Updated: 2025/07/14 19:08:41 by liemi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 static int	is_in_set(char c, const char *set)
 {
@@ -21,7 +23,7 @@ static int	is_in_set(char c, const char *set)
 	return (0);
 }
 
-char	ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start;
 	size_t	end;

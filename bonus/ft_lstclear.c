@@ -6,9 +6,11 @@
 /*   By: liemi <liemi@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 21:31:11 by liemi             #+#    #+#             */
-/*   Updated: 2025/07/13 21:35:48 by liemi            ###   ########.fr       */
+/*   Updated: 2025/07/14 22:03:38 by liemi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {

@@ -6,11 +6,11 @@
 /*   By: liemi <liemi@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 15:36:20 by liemi             #+#    #+#             */
-/*   Updated: 2025/07/08 16:04:28 by liemi            ###   ########.fr       */
+/*   Updated: 2025/07/14 16:49:15 by liemi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {

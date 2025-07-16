@@ -6,9 +6,11 @@
 /*   By: liemi <liemi@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 17:43:01 by liemi             #+#    #+#             */
-/*   Updated: 2025/07/08 16:25:10 by liemi            ###   ########.fr       */
+/*   Updated: 2025/07/14 18:20:56 by liemi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

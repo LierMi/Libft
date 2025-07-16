@@ -6,16 +6,18 @@
 /*   By: liemi <liemi@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 15:35:16 by liemi             #+#    #+#             */
-/*   Updated: 2025/07/07 16:22:14 by liemi            ###   ########.fr       */
+/*   Updated: 2025/07/14 17:00:27 by liemi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *s)
 {
-	int	len;
+	size_t	len;
 
 	len = 0;
-	while (str[len] != '\0')
+	while (s[len] != '\0')
 		len++;
 	return (len);
 }

@@ -6,11 +6,13 @@
 /*   By: liemi <liemi@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/09 17:48:07 by liemi             #+#    #+#             */
-/*   Updated: 2025/07/09 18:08:03 by liemi            ###   ########.fr       */
+/*   Updated: 2025/07/14 19:03:18 by liemi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_strjoin(char const *s1, char const *s2)
+#include "libft.h"
+
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*result;
 	size_t	len1;

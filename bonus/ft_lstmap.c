@@ -6,11 +6,13 @@
 /*   By: liemi <liemi@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 21:50:08 by liemi             #+#    #+#             */
-/*   Updated: 2025/07/13 22:08:23 by liemi            ###   ########.fr       */
+/*   Updated: 2025/07/14 22:49:49 by liemi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-t_list	ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+#include "libft.h"
+
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new;
 	t_list	*head;
@@ -25,7 +27,7 @@ t_list	ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		new = ft_lstnew(content);
 		if (!new)
 		{
-			ft_lstclear(&head, new);
+			ft_lstclear(&head, del);
 			return (NULL);
 		}
 		ft_lstadd_back(&head, new);

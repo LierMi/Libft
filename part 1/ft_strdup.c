@@ -6,9 +6,11 @@
 /*   By: liemi <liemi@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 22:00:04 by liemi             #+#    #+#             */
-/*   Updated: 2025/07/08 22:02:00 by liemi            ###   ########.fr       */
+/*   Updated: 2025/07/14 18:43:05 by liemi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strdup(const char *s1)
 {

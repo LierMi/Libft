@@ -6,9 +6,11 @@
 /*   By: liemi <liemi@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 18:58:53 by liemi             #+#    #+#             */
-/*   Updated: 2025/07/13 19:05:00 by liemi            ###   ########.fr       */
+/*   Updated: 2025/07/14 22:03:29 by liemi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {

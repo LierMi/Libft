@@ -6,9 +6,11 @@
 /*   By: liemi <liemi@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 17:44:42 by liemi             #+#    #+#             */
-/*   Updated: 2025/07/07 18:06:53 by liemi            ###   ########.fr       */
+/*   Updated: 2025/07/14 18:40:41 by liemi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {

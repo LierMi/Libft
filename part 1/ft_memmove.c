@@ -6,19 +6,22 @@
 /*   By: liemi <liemi@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 16:29:29 by liemi             #+#    #+#             */
-/*   Updated: 2025/07/08 18:37:44 by liemi            ###   ########.fr       */
+/*   Updated: 2025/07/14 16:38:13 by liemi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memmove(void *dest, const void *src, size_t len)
+#include "libft.h"
+
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t				i;
 	unsigned char		*d;
 	const unsigned char	*s;
 
-	d = (unsigned char *)dest;
+	if (!dst && !src)
+		return (NULL);
+	d = (unsigned char *)dst;
 	s = (const unsigned char *)src;
-
 	if (d > s && d < s + len)
 	{
 		i = len;
@@ -37,5 +40,5 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 			i++;
 		}
 	}
-	return (dest);
+	return (dst);
 }

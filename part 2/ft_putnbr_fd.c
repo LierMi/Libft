@@ -6,9 +6,11 @@
 /*   By: liemi <liemi@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/11 16:23:45 by liemi             #+#    #+#             */
-/*   Updated: 2025/07/11 16:33:41 by liemi            ###   ########.fr       */
+/*   Updated: 2025/07/14 18:49:13 by liemi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {

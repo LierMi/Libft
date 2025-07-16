@@ -6,9 +6,11 @@
 /*   By: liemi <liemi@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/11 16:15:46 by liemi             #+#    #+#             */
-/*   Updated: 2025/07/11 16:17:58 by liemi            ###   ########.fr       */
+/*   Updated: 2025/07/14 18:49:19 by liemi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {

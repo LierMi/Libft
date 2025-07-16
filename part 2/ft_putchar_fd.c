@@ -6,11 +6,13 @@
 /*   By: liemi <liemi@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/11 15:52:53 by liemi             #+#    #+#             */
-/*   Updated: 2025/07/11 15:59:50 by liemi            ###   ########.fr       */
+/*   Updated: 2025/07/14 20:02:50 by liemi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	cft_putchar_fd(char c, int fd)
+#include "libft.h"
+
+void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }

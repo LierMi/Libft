@@ -6,11 +6,13 @@
 /*   By: liemi <liemi@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 15:27:03 by liemi             #+#    #+#             */
-/*   Updated: 2025/07/07 16:22:04 by liemi            ###   ########.fr       */
+/*   Updated: 2025/07/14 17:03:04 by liemi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+#include "libft.h"
+
+int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);

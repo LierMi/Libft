@@ -6,9 +6,11 @@
 /*   By: liemi <liemi@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/09 17:23:48 by liemi             #+#    #+#             */
-/*   Updated: 2025/07/09 17:46:21 by liemi            ###   ########.fr       */
+/*   Updated: 2025/07/14 18:49:58 by liemi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

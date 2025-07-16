@@ -6,11 +6,13 @@
 /*   By: liemi <liemi@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 21:36:07 by liemi             #+#    #+#             */
-/*   Updated: 2025/07/13 21:40:00 by liemi            ###   ########.fr       */
+/*   Updated: 2025/07/14 22:46:12 by liemi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_lstiter(t_list *lst, void(*f)(void *))
+#include "libft.h"
+
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (!lst || !f)
 		return ;

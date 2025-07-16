@@ -6,7 +6,7 @@
 /*   By: liemi <liemi@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/11 16:45:41 by liemi             #+#    #+#             */
-/*   Updated: 2025/07/13 22:30:39 by liemi            ###   ########.fr       */
+/*   Updated: 2025/07/16 17:22:30 by liemi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -161,7 +161,7 @@ void	*to_upper(void *content)
 		i++;
 	}
 	return ((void *)new);
-} 
+}
 
 // 原地转小写
 void	to_lower(void *content)
@@ -176,4 +176,75 @@ void	to_lower(void *content)
 		str[i] = (char)tolower(str[i]);
 		i++;
 	}
+}
+
+// 打印链表内容
+void	print_list(t_list *lst)
+{
+	int	i;
+
+	i = 0;
+	while (lst != NULL)
+	{
+		printf("[%d] %s\n", i++, (char *)lst->content);
+		lst = lst->next;
+	}
+}
+
+// 释放节点内容
+void	del_func(void *content)
+{
+	free(content);
+}
+
+int	main(void)
+{
+	t_list	*head;
+	t_list	*mapped;
+	t_list	*last;
+	t_list	*tmp;
+
+	// lstnew
+	head = ft_lstnew(ft_strdup("Node1"));
+	printf("%s\n\n", (char *)head->content);
+
+	// lstadd_front
+	tmp = ft_lstnew(ft_strdup("Node0"));
+	ft_lstadd_front(&head, tmp);
+	print_list(head);
+	printf("\n");
+
+	// lstsize
+	printf("%d\n\n", ft_lstsize(head));
+
+	// lstlast
+	last = ft_lstlast(head);
+	printf("%s\n\n", (char *)last->content);
+
+	// lstadd_back
+	ft_lstadd_back(&head, ft_lstnew(ft_strdup("Node2")));
+	printf("\n");
+	print_list(head);
+	print("\n");
+
+	// lstdelone
+	tmp = ft_lstnew(ft_strdup("Temp"));
+	ft_lstdelone(tmp, del_func);
+
+	// lstiter
+	ft_lstiter(head, to_lower);
+	print_list(head);
+	printf("\n");
+
+	// lstmap
+	mapped = ft_lstmap(head, to_upper, del_func);
+	ptint_list(mapped);
+	printf("\n");
+
+	// lstclear
+	ft_lstclear(&head, del_func);
+	ft_lstclear(&mapped, del_func);
+	printf("\n");
+
+	return (0);
 }
